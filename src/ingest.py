@@ -20,7 +20,7 @@ from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from src.db.models import Answer, Question
-from src.db.session import SessionLocal, engine
+from src.db.session import get_engine, get_sessionmaker
 
 DATA_DIR = Path("data/raw")
 ANSWER_COLS = ["id", "category_id", "topic_id", "text", "status", "created_at", "updated_at"]
@@ -102,7 +102,7 @@ async def sync(answers: pd.DataFrame, questions: pd.DataFrame) -> dict[str, int]
     question_ids = [int(i) for i in questions["id"]]
 
     # session.begin(): blok xatosiz tugasa COMMIT, xato bo'lsa ROLLBACK (hammasi yoki hech narsa)
-    async with SessionLocal() as session, session.begin():
+    async with get_sessionmaker()() as session, session.begin():
         # Tartib muhim: savollar javoblarga ishora qiladi, shuning uchun avval javoblar
         await upsert(session, Answer, to_rows(answers, ANSWER_COLS), ANSWER_COLS)
         await upsert(session, Question, to_rows(questions, QUESTION_COLS), QUESTION_COLS)
@@ -133,7 +133,7 @@ async def main(data_dir: Path) -> int:
         return 1
 
     result = await sync(answers, questions)
-    await engine.dispose()
+    await get_engine().dispose()
     print(f"Bazada: {result['answers']} javob, {result['questions']} savol")
     print(
         f"CSV'da yo'qligi uchun o'chirildi: {result['deleted_answers']} javob, "
