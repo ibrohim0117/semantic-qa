@@ -21,6 +21,9 @@ class Settings(BaseSettings):
 
     model_path: str = "models/bge-m3-fp16"
 
+    qdrant_url: str = "http://localhost:6333"
+    qdrant_collection: str = "questions"
+
     @property
     def database_url(self) -> URL:
         # URL.create parolda maxsus belgilar (@, :, /) bo'lsa ham to'g'ri ishlaydi
