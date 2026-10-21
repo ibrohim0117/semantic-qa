@@ -1,0 +1,77 @@
+id,question,answer_id,alt_answer_ids,style
+1,"ID-kartamda ismim xato yozilib qolibdi, men aybdor emasman, pulini yana to'laymanmi?",4,184,sozlashuv
+2,to'ydan oldin qanaqa tibbiy ko'rikdan o'tish kerak?,9,,sozlashuv
+3,"Ism familiyamni o'zgartirmoqchiman, 17 yoshdaman, ota-onam kerakmi?",15,,sozlashuv
+4,"nikoh guvohnomamni yo'qotib qo'ydim, yangisini qanday olaman",16,,sozlashuv
+5,"ДХМ қаерда жойлашган, иш вақти қанақа?",30,,kirill
+6,"Как получить ID-карту в первый раз, если исполнилось 16 лет?",35,,rus
+7,"otam vafot etdi, uyini merosga rasmiylashtirish uchun qanaqa hujjatlar yig'ishim kerak?",44,,sozlashuv
+8,kvartiraga kadastr hujjatini qilish necha kunda bo'ladi,48,,sozlashuv
+9,"rossiyaga ishga ketmoqchiman, qonuniy yo'l bilan qanday chiqsam bo'ladi?",65,,sozlashuv
+10,elektron raqamli imzo olish uchun qayerga borish kerak,73,,sozlashuv
+11,my.gov.uz da ariza berdim qayerdan kuzatsa boladi,75,,xato
+12,давлат органига ёзган мурожаатимга неча кунда жавоб беришади?,81,,kirill
+13,1 yoshli bolamga ham ID karta qilish shartmi?,83,,sozlashuv
+14,"aliment qarzim borligi uchun chet elga chiqishim taqiqlangan, qanday olib tashlatsam bo'ladi?",94,169,sozlashuv
+15,"Я живу за границей, нужно ли вставать на консульский учёт?",98,,rus
+16,prava imtihonida nechta savolga togri javob berish kere,113,,xato
+17,"deklaratsiyani qayerdan topshiraman, soliq.uz dami?",116,,sozlashuv
+18,uyimga yer solig'i qanday hisoblanadi va qayerdan to'layman,117,,sozlashuv
+19,soliq inspektoridan shikoyat qilmoqchiman qayerga yozay,119,,sozlashuv
+20,"YaTT faoliyatimni yopmoqchiman, nima qilishim kerak?",122,,sozlashuv
+21,"xo'jayinim oylikni bermayapti, qayerga murojaat qilsam bo'ladi?",127,,sozlashuv
+22,"stajim umuman yo'q, menga pensiya beriladimi?",130,,sozlashuv
+23,ishdan qisqardim pensiyaga ertaroq chiqsa buladimi,134,,xato
+24,bolamni 1-sinfga qachon va qanday yozdiraman?,140,296,sozlashuv
+25,atestatimni yuqotdim qayta olsa buladimi,142,349,xato
+26,voenniy biletim yo'qolib qoldi nima qilay,147,,sozlashuv
+27,"podyezdimiz ta'mirlanmayapti, kim javobgar?",152,354,sozlashuv
+29,"arizamni sababsiz rad etishdi, qayerga shikoyat qilsam bo'ladi?",167,,sozlashuv
+30,"qarzim bor deb chegaradan o'tkazishmadi, bu qonuniymi?",169,94,sozlashuv
+31,do'stimga qarz bergandim qaytarmayapti nima qilsam bo'ladi,171,,sozlashuv
+32,stir nomer qanday olinadi,178,,xato
+33,"ID kartam sinib qoldi, almashtirsam bo'ladimi",184,4,sozlashuv
+34,"propiskam Samarqandda, ID kartani Toshkentda almashtirsam bo'ladimi?",186,,sozlashuv
+35,"uy sotib olyapman, notariusga borish shartmi?",208,,sozlashuv
+36,"mashinamni bahosini rasmiy aniqlatmoqchiman, qayerga boriladi?",214,,sozlashuv
+37,mashinani sotsam nomerini o'zimga olib qolsam bo'ladimi?,215,,sozlashuv
+38,"машинамни сотмоқчиман, қандай ҳужжатлар керак?",216,,kirill
+39,"ishlatilgan mashina olyapman, garovda emasligini qanday tekshiraman?",217,,sozlashuv
+40,nogironlar uchun mashina bojxona imtiyozi bormi?,220,,sozlashuv
+41,kichik biznes uchun soddalashtirilgan soliq bormi,224,,sozlashuv
+42,"kasal bo'lib ishga bormadim, bolnichniy pullik to'lanadimi?",234,,sozlashuv
+43,ногиронлик гуруҳини олиш учун қаердан бошлаш керак?,237,,kirill
+44,"yolg'iz buvimga uyda qarovchi kerak, davlat yordam beradimi?",239,,sozlashuv
+45,bog'chaga navbatda nechanchi turganimizni qayerdan ko'rsam bo'ladi?,247,,sozlashuv
+46,armiyadan qaytganlarga institutga kirishda imtiyoz bormi?,254,,sozlashuv
+47,Какие услуги оказывает консульство Узбекистана?,269,,rus
+48,"ID kartamning amal qilish muddati tugayapti, nima qilay?",282,,sozlashuv
+49,"бола чет элда туғилди, унга ID-карта қандай олинади?",285,,kirill
+50,id kartani vaqtida almashtirmasam shtraf bormi,286,,sozlashuv
+51,ajrashganimdan keyin eski familiyamni qaytarsam bo'ladimi?,288,,sozlashuv
+52,bolamni uyimizdan uzoqroq maktabga bersam bo'ladimi?,296,140,sozlashuv
+53,"chet elga uzoq muddatga ketyapman, propiskadan chiqishim kerakmi?",299,,sozlashuv
+54,dexqon xojaligini qanday royxatdan otkazaman,325,,xato
+55,ishga kirish uchun qanaqa hujjatlar so'rashadi,333,,sozlashuv
+56,"қон топширмоқчиман, нима олиб боришим керак?",343,,kirill
+57,alohida ehtiyojli bolamni maxsus maktabga qanday joylashtiraman?,347,,sozlashuv
+58,diplomning ilovasini yo'qotib qo'ydim,349,142,qisqa
+59,uyimizning shirkatiga to'lov to'lash majburiymi?,354,152,sozlashuv
+60,sud buyrug'i nima o'zi,359,,qisqa
+61,Можно ли ездить по Узбекистану с иностранными правами?,366,,rus
+62,"posilkam kelmadi, pochtaga qanday shikoyat qilaman?",369,,sozlashuv
+63,qaysi davlat xizmatiga qanday hujjat kerakligini qayerdan bilaman,371,,sozlashuv
+64,14 yoshli o'g'limga bank kartasi ochsa bo'ladimi?,380,,sozlashuv
+65,"kelin chet elda, nikohni u kelmasdan ro'yxatdan o'tkazsa bo'ladimi?",393,,sozlashuv
+66,"diplomni tarjima qilib notariusda tasdiqlatish kerak, qanday qilinadi",408,,sozlashuv
+67,doverennost necha yilgacha amal qiladi,409,,sozlashuv
+68,qishloq xo'jaligi yerini turar joyga o'tkazsa bo'ladimi?,412,,sozlashuv
+69,"uyimga xatlov qo'yilgan, qanday olib tashlatsam bo'ladi?",414,,sozlashuv
+70,декретга чиққанимда болага пул тўланадими?,441,,kirill
+71,Бесплатно ли лечение в государственной поликлинике?,446,,rus
+72,da'vo muddati o'tib ketsa sudga bera olmaymanmi?,466,,sozlashuv
+73,"Отец умер в России, как оформить свидетельство о смерти в Узбекистане?",471,,rus
+74,"arizam ko'rib chiqilmay qaytdi, endi nima qilaman",482,,sozlashuv
+75,mygovuz dagi telefon nomerimni qanday ozgartiraman,485,,xato
+76,erga tegsam familiyamni o'zgartirishim shartmi?,496,,sozlashuv
+77,"ishsizman, bandlik markaziga nima bilan borishim kerak?",501,,sozlashuv
