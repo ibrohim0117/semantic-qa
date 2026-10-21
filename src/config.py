@@ -19,6 +19,8 @@ class Settings(BaseSettings):
     postgres_host: str = "localhost"
     postgres_port: int = 5432
 
+    model_path: str = "models/bge-m3-fp16"
+
     @property
     def database_url(self) -> URL:
         # URL.create parolda maxsus belgilar (@, :, /) bo'lsa ham to'g'ri ishlaydi
