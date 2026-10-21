@@ -5,8 +5,10 @@ raqam orqali bog'lanadi). Payload'da faqat bog'lanish va filtr uchun kerakli raq
 savol matni Postgres'da turadi (haqiqat manbai bitta bo'lsin).
 """
 
+from dataclasses import dataclass
 from functools import lru_cache
 
+import numpy as np
 from qdrant_client import QdrantClient, models
 
 from src.config import get_settings
@@ -46,3 +48,27 @@ def ensure_collection(client: QdrantClient, name: str, recreate: bool = False) -
             name, field_name=field, field_schema=models.PayloadSchemaType.INTEGER
         )
     return True
+
+
+@dataclass(frozen=True)
+class Hit:
+    question_id: int  # Postgres'dagi questions.id
+    answer_id: int
+    score: float  # cosine o'xshashlik
+
+
+def search(
+    client: QdrantClient, name: str, vector: np.ndarray, limit: int = 10, exact: bool = False
+) -> list[Hit]:
+    """Eng yaqin savollar (ballari kamayish tartibida).
+
+    exact=True: indeksdan foydalanmay hamma vektorni tekshiradi (taqqoslash uchun).
+    """
+    response = client.query_points(
+        name,
+        query=vector.tolist(),
+        limit=limit,
+        with_payload=["answer_id"],
+        search_params=models.SearchParams(exact=exact),
+    )
+    return [Hit(int(p.id), int(p.payload["answer_id"]), p.score) for p in response.points]
