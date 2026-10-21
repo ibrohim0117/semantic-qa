@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Maxfiy sozlamalar
+.env
+
+# Model fayllari va hisoblangan ma'lumotlar (katta, gitga kirmaydi)
+models/
+data/processed/
+
+# macOS xizmat fayllari
+.DS_Store
+
+# Claude uchun lokal eslatmalar (GitHub'ga chiqmaydi)
+CLAUDE.md
