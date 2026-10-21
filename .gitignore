@@ -15,3 +15,4 @@ data/processed/
 
 # Claude uchun lokal eslatmalar (GitHub'ga chiqmaydi)
 CLAUDE.md
+.ruff_cache/

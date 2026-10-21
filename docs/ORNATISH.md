@@ -204,6 +204,24 @@ papkasida saqlanadi. Bu papka `.gitignore` da, gitga kirmaydi.
 poetry run hf download BAAI/bge-m3 --local-dir models/bge-m3 --exclude "onnx/*" "imgs/*"
 ```
 
+Keyin modelni bir marta fp16 (yarim aniqlik) ga o'giring:
+
+```bash
+poetry run python scripts/convert_model_fp16.py
+```
+
+Natija `models/bge-m3-fp16` papkasiga safetensors formatida saqlanadi (1.1 GB).
+Tizim aynan shu nusxani ishlatadi. O'lchangan natijalar (Apple M, MPS):
+
+| | Asl fp32 | fp16 nusxa |
+|---|---|---|
+| Doimiy xotira (RAM + GPU) | 2.55 GB | 1.58 GB |
+| Yuklanish paytidagi eng yuqori RAM | 0.93 GB | 0.94 GB |
+| Yuklanish vaqti | 13.6 s | 3.3 s |
+| O'xshashlik baholaridagi farq | — | ≤ 0.0004, tartib bir xil |
+
+GPU bo'lmagan kompyuterda (faqat CPU) kod fp32 da ishlaydi, chunki CPU'da fp16 sekin.
+
 `hf` buyrug'i `huggingface_hub` kutubxonasi bilan birga keladi. U
 `sentence-transformers` bilan avtomatik o'rnatiladi, alohida o'rnatish shart emas.
 

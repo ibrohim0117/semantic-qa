@@ -1,0 +1,33 @@
+# Ishlab chiqish muhiti: PostgreSQL (matnlar) va Qdrant (vektorlar).
+# API va bot hozircha Mac'da (.venv) ishlaydi, 10-qadamda ular ham shu faylga qo'shiladi.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      # ${NOM:-standart}: .env da NOM bo'lsa o'shani, bo'lmasa standart qiymatni oladi
+      POSTGRES_USER: ${POSTGRES_USER:-semantic}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-semantic}
+      POSTGRES_DB: ${POSTGRES_DB:-semantic_qa}
+    ports:
+      - "127.0.0.1:5432:5432" # faqat shu kompyuterdan ulanish mumkin
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  qdrant:
+    image: qdrant/qdrant:v1.19.2 # qdrant-client 1.19 bilan mos versiya
+    environment:
+      # Qdrant standart holatda anonim statistikani internetga yuboradi. Biz o'chiramiz.
+      QDRANT__TELEMETRY_DISABLED: "true"
+    ports:
+      - "127.0.0.1:6333:6333" # REST API va brauzer paneli (/dashboard)
+    volumes:
+      - qdrant-data:/qdrant/storage
+
+volumes:
+  postgres-data:
+  qdrant-data:
