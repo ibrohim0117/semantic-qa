@@ -72,3 +72,29 @@ def search(
         search_params=models.SearchParams(exact=exact),
     )
     return [Hit(int(p.id), int(p.payload["answer_id"]), p.score) for p in response.points]
+
+
+@dataclass(frozen=True)
+class AnswerHit:
+    answer_id: int
+    score: float  # shu javobning eng yaqin savoli bali
+    question_id: int  # o'sha eng yaqin savol (foydalanuvchiga "nimaga o'xshadi" deb ko'rsatiladi)
+
+
+def search_answers(
+    client: QdrantClient, name: str, vector: np.ndarray, limit: int = 3
+) -> list[AnswerHit]:
+    """Eng yaqin `limit` ta TURLI javob, ballari kamayish tartibida.
+
+    Qdrant natijalarni answer_id bo'yicha o'zi guruhlaydi va har guruhdan eng yaqin
+    bitta savolni qaytaradi — bitta javobning variantlari ro'yxatni to'ldirib qo'ymaydi.
+    """
+    response = client.query_points_groups(
+        name,
+        query=vector.tolist(),
+        group_by="answer_id",
+        limit=limit,
+        group_size=1,
+        with_payload=False,
+    )
+    return [AnswerHit(int(g.id), g.hits[0].score, int(g.hits[0].id)) for g in response.groups]
